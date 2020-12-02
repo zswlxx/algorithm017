@@ -49,14 +49,14 @@ def divide_conquer(problem, param1, param2, ...):
 共性：找到重复子问题
 差异性：最优子结构、中途可以淘汰次优解
 
-Fibonacci数列代码
+Fibonacci数列代码 时间复杂度O(n)
 
 int fib(int n, int[] memeo) {
     if (n <= 1) {
         return n;
     }
 
-    if (memo[n] == 0) {
+    if (memo[n] == 0) { //砍掉重复的分支
         memo[n] = fib(n - 1) + fib( n - 2);
     }
     return memo[n];
