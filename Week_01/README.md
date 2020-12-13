@@ -133,8 +133,8 @@ A: a + b = -c (target不止一个)
 def threeSum(self, nums):
     res = []
     nums.sort()
-    for i in xrange(len(nums)-2):
-        for i > 0 and nums[i] == nums[i-1]:
+    for i in range(len(nums)-2):
+        if i > 0 and nums[i] == nums[i-1]:
             continue
         l, r = i+1, len(nums)-1
         while l < r:
